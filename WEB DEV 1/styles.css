@@ -1,0 +1,922 @@
+/* Basic styles */
+body {
+  font-family: Sedan, sans-serif; /* Set the default font family */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #000000; /* Set the background color to black */
+}
+
+/* Define font styles */
+.sedan-regular {
+  font-family: "Sedan", serif; /* Set the Sedan font family */
+  font-weight: 400; /* Set normal font weight */
+  font-style: normal; /* Set normal font style */
+}
+
+.sedan-regular-italic {
+  font-family: "Sedan", serif; /* Set the Sedan font family */
+  font-weight: 400; /* Set normal font weight */
+  font-style: italic; /* Set italic font style */
+}
+
+/* Style the heading in the landing content */
+.landing-content h2 {
+  font-size: 100px; /* Set the font size */
+  padding: 20px; /* Add padding around the heading */
+}
+
+/* Container styles */
+.container {
+  width: 80%; /* Set the container width */
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1200px; /* Set the maximum width of the container */
+}
+
+/* Header styles */
+header {
+  background-color: rgba(12, 12, 12, 0); /* Set transparent background color */
+  padding: 20px 10px; /* Add padding to the header */
+  display: flex; /* Set the header to flex layout */
+  justify-content: space-between; /* Align items with space between them */
+  align-items: center; /* Center items vertically */
+  position: relative; /* Set position to relative */
+  z-index: 1; /* Ensure the header stays above other content */
+}
+
+/* Header text styles */
+header h1 {
+  margin: 0; /* Remove margin */
+  color: #fafafa; /* Set text color */
+  font-size: 20px; /* Set font size */
+  margin-left: 4rem; /* Add left margin */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none; /* Remove default list style */
+  padding: 0; /* Remove default padding */
+  margin: 15px; /* Add margin */
+  margin-right: 4rem; /* Add right margin */
+}
+
+/* Navigation item styles */
+nav ul li {
+  display: inline; /* Set list items to display inline */
+  margin-left: 20px; /* Add left margin */
+}
+
+/* Navigation link styles */
+nav ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #fafafa; /* Set text color */
+  font-size: 20px; /* Set font size */
+}
+
+/* Hover styles for navigation links */
+nav ul li a:hover {
+  color: #b16d6d; /* Change text color on hover */
+}
+
+/* Section styles */
+section {
+  padding: 50px 0; /* Add padding to section */
+}
+
+/* Heading styles */
+h2 {
+  text-align: center; /* Center align heading */
+  position: relative; /* Set position to relative */
+  max-width: 800px; /* Set maximum width */
+  padding: 10px 5px 0; /* Add padding */
+  z-index: 2; /* Set z-index */
+  font-size: 30px; /* Set font size */
+}
+
+/* Button styles */
+button {
+  background-color: #4e3232; /* Set background color */
+  color: #fff; /* Set text color */
+  padding: 20px 20px; /* Add padding */
+  border: none; /* Remove border */
+  border-radius: 20px; /* Add border radius */
+  margin-top: 20px; /* Add top margin */
+  font-size: 15px; /* Set font size */
+}
+
+/* Hover styles for buttons */
+button:hover {
+  background-color: #020202; /* Change background color on hover */
+}
+
+
+
+/* Landing section styles */
+.landing {
+  min-height: calc(80vh - 100px); /* Set minimum height to 80% of viewport height minus header height and any other fixed elements */
+  width: 100%; /* Set width to full viewport width */
+  background-image: url('https://images.unsplash.com/photo-1543422655-ac1c6ca993ed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Set background image */
+  background-size: cover; /* Set background size to cover */
+  display: flex; /* Set to flex layout */
+  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
+  color: #f5ebeb; /* Set text color */
+  text-align: center; /* Center align text */
+  position: relative; /* Set position to relative */
+  overflow-y: auto; /* Enable vertical overflow scrolling */
+}
+
+/* Overlay styles for landing section */
+.landing::after {
+  content: ""; /* Add empty content */
+  position: absolute; /* Set position to absolute */
+  top: 0; /* Set top position */
+  left: 0; /* Set left position */
+  width: 100%; /* Set width to full width */
+  height: 100%; /* Set height to full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Set background color with opacity */
+  z-index: 0; /* Set z-index */
+}
+
+/* Landing content styles */
+.landing-content {
+  display: flex; /* Set to flex layout */
+  flex-direction: column; /* Set flex direction to column */
+  justify-content: center; /* Center align items vertically */
+  align-items: center; /* Center align items horizontally */
+  position: relative; /* Set position to relative */
+  max-width: 800px; /* Set maximum width */
+  padding: 0 20px 80px; /* Add padding */
+  z-index: 2; /* Set z-index */
+  font-size: 30px; /* Set font size */
+}
+
+/* Paragraph styles within landing content */
+.landing-content p {
+  margin-top: 20px; /* Add top margin */
+}
+
+/* Styling for text within landing content */
+.landing-content h1,
+.landing-content p {
+  color: #fff; /* Set text color */
+}
+
+/* Add animation styles */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Set initial opacity */
+    transform: translateY(20px); /* Move element down */
+  }
+  to {
+    opacity: 1; /* Set final opacity */
+    transform: translateY(0); /* Move element up */
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0; /* Set initial opacity */
+    transform: translateX(-20px); /* Move element left */
+  }
+  to {
+    opacity: 1; /* Set final opacity */
+    transform: translateX(0); /* Move element to its original position */
+  }
+}
+
+/* Apply animations to landing content elements */
+.landing-content h2,
+.landing-content p,
+.landing-content button {
+  opacity: 0; /* Initially hidden */
+}
+
+.landing-content h2 {
+  animation: fadeInUp 1s ease forwards; /* Add fade-in animation */
+  animation-delay: 0.3s; /* Delay animation */
+}
+
+.landing-content p {
+  animation: fadeInUp 1s ease forwards; /* Add fade-in animation */
+  animation-delay: 0.6s; /* Delay animation */
+}
+
+.landing-content button {
+  animation: fadeInUp 1s ease forwards; /* Add fade-in animation */
+  animation-delay: 0.8s; /* Delay animation */
+}
+
+/* Interactive animation on hover */
+.landing-content h2:hover,
+.landing-content p:hover {
+  animation: slideInLeft 0.5s ease forwards; /* Add slide-in animation on hover */
+}
+
+/* Scroll icon styles */
+.scroll-down-button {
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Set cursor to pointer */
+  padding: 0; /* Remove padding */
+  display: flex; /* Set to flex layout */
+  justify-content: center; /* Center align items horizontally */
+  align-items: center; /* Center align items vertically */
+  outline: none; /* Remove outline */
+}
+
+/* Styling for scroll down icon */
+.scroll-down-button svg {
+  width: 24px; /* Set width */
+  height: 24px; /* Set height */
+  stroke: #fff; /* Set color */
+}
+
+/* Brand identity section styles */
+.brand-identity {
+  padding: 100px 0; /* Add padding */
+  background-color: #f8f8f8; /* Set background color */
+}
+
+.brand-identity-content {
+  max-width: 800px; /* Set maximum width */
+  margin: 0 auto; /* Center align horizontally */
+  text-align: center; /* Center align text */
+
+}
+
+.brand-identity-content h2 {
+  font-size: 40px; /* Set font size */
+  color: #333; /* Set text color */
+}
+
+.brand-identity-content p {
+  font-size: 25px; /* Set font size */
+  color: #666; /* Set text color */
+}
+
+/* Brand identity section styles */
+.brand-identity {
+  padding: 100px 0; /* Add padding */
+  background-color: #f8f8f8; /* Set background color */
+  display: flex; /* Set to flex layout */
+  justify-content: space-between; /* Align items with space between them */
+  align-items: left; /* Center align items vertically */
+}
+
+/* Brand identity content styles */
+.brand-identity-content {
+  max-width: 60%; /* Set maximum width */
+  text-align: left; /* Align text to the left */
+  padding-left: 20px; /* Add left padding */
+  align-items: left;
+}
+.brand-identity-content h2 {
+  text-align: left;
+}
+
+
+/* Brand identity image styles */
+.brand-identity-image {
+  max-width: 50%; /* Set maximum width */
+  align-items:  right; /* Align image to the right */
+  margin-right: 4rem;
+}
+
+/* Style for the image */
+.brand-identity-image img {
+  border-radius: 10px; /* Adjust the border radius as needed */
+}
+
+/* Apply animations to brand identity section elements */
+.brand-identity-content h2,
+.brand-identity-content p {
+  opacity: 0; /* Initially hidden */
+}
+
+.brand-identity-content h2 {
+  animation: fadeInUp 1s ease forwards; /* Add fade-in animation */
+  animation-delay: 0.3s; /* Delay animation */
+}
+
+.brand-identity-content p {
+  animation: fadeInUp 1s ease forwards; /* Add fade-in animation */
+  animation-delay: 0.6s; /* Delay animation */
+}
+/* Define animation classes */
+/* Define animation classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateY(20px); /* Move element down by 20 pixels */
+  }
+  to {
+    opacity: 1; /* Set final opacity to 1 */
+    transform: translateY(0); /* Move element up to its original position */
+  }
+}
+
+/* Apply animations */
+.brand-identity-content {
+  opacity: 0; /* Initially hide the brand identity content */
+}
+
+.brand-identity-image {
+  opacity: 0; /* Initially hide the brand identity image */
+}
+
+.animate {
+  animation: fadeInUp 1s ease forwards; /* Apply fadeInUp animation with a duration of 1 second */
+}
+
+/* Define animation for identity content */
+#identity-content.animate {
+  opacity: 1; /* Make the identity content visible */
+  transform: translateY(0); /* Move identity content to its original position */
+}
+
+/* Define animation for identity image */
+#identity-image.animate {
+  opacity: 1; /* Make the identity image visible */
+  transform: translateX(0); /* Move identity image to its original position */
+}
+
+/* Hover animation for identity content */
+#identity-content:hover {
+  animation: slideInUp 0.9s ease forwards; /* Apply slideInUp animation on hover with a duration of 0.9 seconds */
+}
+
+/* Hover animation for identity image */
+#identity-image:hover {
+  animation: slideInRight 0.9s ease forwards; /* Apply slideInRight animation on hover with a duration of 0.9 seconds */
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideInUp {
+  from {
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateY(20px); /* Move element down by 20 pixels */
+  }
+  to {
+    opacity: 1; /* Set final opacity to 1 */
+    transform: translateY(0); /* Move element up to its original position */
+  }
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateX(20px); /* Move element right by 20 pixels */
+  }
+  to {
+    opacity: 1; /* Set final opacity to 1 */
+    transform: translateX(0); /* Move element to its original position */
+  }
+}
+
+.testimonial-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+  background-color: #b16d6d;
+}
+
+/* Testimonial section styles */
+.testimonials {
+  text-align: center; /* Align text to center */
+}
+
+/* Testimonial heading styles */
+/* Basic styles */
+body {
+  font-family: Sedan, sans-serif; /* Set the default font family */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #000000; /* Set the background color to black */
+}
+
+/* Define font styles */
+.sedan-regular {
+  font-family: "Sedan", serif; /* Set the Sedan font family */
+  font-weight: 400; /* Set normal font weight */
+  font-style: normal; /* Set normal font style */
+}
+
+.sedan-regular-italic {
+  font-family: "Sedan", serif; /* Set the Sedan font family */
+  font-weight: 400; /* Set normal font weight */
+  font-style: italic; /* Set italic font style */
+}
+
+/* Style the heading in the landing content */
+.landing-content h2 {
+  font-size: 100px; /* Set the font size */
+  padding: 20px; /* Add padding around the heading */
+}
+
+/* Container styles */
+.container {
+  width: 80%; /* Set the container width */
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1200px; /* Set the maximum width of the container */
+}
+
+/* Header styles */
+header {
+  background-color: rgba(12, 12, 12, 0); /* Set transparent background color */
+  padding: 20px 10px; /* Add padding to the header */
+  display: flex; /* Set the header to flex layout */
+  justify-content: space-between; /* Align items with space between them */
+  align-items: center; /* Center items vertically */
+  position: relative; /* Set position to relative */
+  z-index: 1; /* Ensure the header stays above other content */
+}
+
+/* Header text styles */
+header h1 {
+  margin: 0; /* Remove margin */
+  color: #fafafa; /* Set text color */
+  font-size: 20px; /* Set font size */
+  margin-left: 4rem; /* Add left margin */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none; /* Remove default list style */
+  padding: 0; /* Remove default padding */
+  margin: 15px; /* Add margin */
+  margin-right: 4rem; /* Add right margin */
+}
+
+/* Navigation item styles */
+nav ul li {
+  display: inline; /* Set list items to display inline */
+  margin-left: 20px; /* Add left margin */
+}
+
+/* Navigation link styles */
+nav ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #fafafa; /* Set text color */
+  font-size: 20px; /* Set font size */
+}
+
+/* Hover styles for navigation links */
+nav ul li a:hover {
+  color: #b16d6d; /* Change text color on hover */
+}
+
+/* Section styles */
+section {
+  padding: 50px 0; /* Add padding to section */
+}
+
+/* Heading styles */
+h2 {
+  text-align: center; /* Center align heading */
+  position: relative; /* Set position to relative */
+  max-width: 800px; /* Set maximum width */
+  padding: 40px 20px 0; /* Add padding */
+  z-index: 2; /* Set z-index */
+  font-size: 30px; /* Set font size */
+}
+
+/* Button styles */
+button {
+  background-color: #4e3232; /* Set background color */
+  color: #fff; /* Set text color */
+  padding: 20px 20px; /* Add padding */
+  border: none; /* Remove border */
+  border-radius: 20px; /* Add border radius */
+  margin-top: 20px; /* Add top margin */
+  font-size: 15px; /* Set font size */
+}
+
+/* Hover styles for buttons */
+button:hover {
+  background-color: #020202; /* Change background color on hover */
+}
+
+
+/* Landing section styles */
+.landing {
+  height: 100vh; /* Set height to viewport height */
+  width: 100%; /* Set width to full viewport width */
+  background-image: url('https://images.unsplash.com/photo-1543422655-ac1c6ca993ed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Set background image */
+  background-size: cover; /* Set background size to cover */
+  display: flex; /* Set to flex layout */
+  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
+  color: #f5ebeb; /* Set text color */
+  text-align: center; /* Center align text */
+  overflow: hidden; /* Hide overflow */
+  position: relative; /* Set position to relative */
+}
+
+/* Overlay styles for landing section */
+.landing::after {
+  content: ""; /* Add empty content */
+  position: absolute; /* Set position to absolute */
+  top: 0; /* Set top position */
+  left: 0; /* Set left position */
+  width: 100%; /* Set width to full width */
+  height: 100%; /* Set height to full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Set background color with opacity */
+  z-index: 0; /* Set z-index */
+}
+
+/* Landing content styles */
+.landing-content {
+  display: flex; /* Set to flex layout */
+  flex-direction: column; /* Set flex direction to column */
+  justify-content: center; /* Center align items vertically */
+  align-items: center; /* Center align items horizontally */
+  position: relative; /* Set position to relative */
+  max-width: 800px; /* Set maximum width */
+  padding: 0 20px 80px; /* Add padding */
+  z-index: 2; /* Set z-index */
+  font-size: 30px; /* Set font size */
+}
+.landing-content h2{
+    margin-bottom: 10px; /* Adjust the margin-bottom as needed */
+    margin-top: -10%;
+  
+}
+
+
+/* Paragraph styles within landing content */
+.landing-content p {
+  margin-top: 20px; /* Add top margin */
+}
+
+/* Styling for text within landing content */
+.landing-content h1,
+.landing-content p {
+  color: #fff; /* Set text color */
+}
+
+/* Add animation styles */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Set initial opacity */
+    transform: translateY(20px); /* Move element down */
+  }
+  to {
+    opacity: 1; /* Set final opacity */
+    transform: translateY(0); /* Move element up */
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0; /* Set initial opacity */
+    transform: translateX(-20px); /* Move element left */
+  }
+  to {
+    opacity: 1; /* Set final opacity */
+    transform: translateX(0); /* Move element to its original position */
+  }
+}
+
+/* Apply animations to landing content elements */
+.landing-content h2,
+.landing-content p,
+.landing-content button {
+  opacity: 0; /* Initially hidden */
+}
+
+.landing-content h2 {
+  animation: fadeInUp 1s ease forwards; /* Add fade-in animation */
+  animation-delay: 0.3s; /* Delay animation */
+}
+
+.landing-content p {
+  animation: fadeInUp 1s ease forwards; /* Add fade-in animation */
+  animation-delay: 0.6s; /* Delay animation */
+}
+
+.landing-content button {
+  animation: fadeInUp 1s ease forwards; /* Add fade-in animation */
+  animation-delay: 0.8s; /* Delay animation */
+}
+
+/* Interactive animation on hover */
+.landing-content h2:hover,
+.landing-content p:hover {
+  animation: slideInLeft 0.5s ease forwards; /* Add slide-in animation on hover */
+}
+
+/* Scroll icon styles */
+.scroll-down-button {
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Set cursor to pointer */
+  padding: 0; /* Remove padding */
+  display: flex; /* Set to flex layout */
+  justify-content: center; /* Center align items horizontally */
+  align-items: center; /* Center align items vertically */
+  outline: none; /* Remove outline */
+}
+
+/* Styling for scroll down icon */
+.scroll-down-button svg {
+  width: 24px; /* Set width */
+  height: 24px; /* Set height */
+  stroke: #fff; /* Set color */
+}
+
+/* Brand identity section styles */
+.brand-identity {
+  padding: 100px 0; /* Add padding */
+  background-color: #f8f8f8; /* Set background color */
+  height: 75vh;
+}
+
+.brand-identity-content {
+  max-width: 800px; /* Set maximum width */
+  margin: 40 auto; /* Center align horizontally */
+  text-align: center; /* Center align text */
+
+}
+
+.brand-identity-content h2 {
+  font-size: 40px; /* Set font size */
+  color: #333; /* Set text color */
+}
+
+.brand-identity-content p {
+  font-size: 25px; /* Set font size */
+  color: #666; /* Set text color */
+}
+
+/* Brand identity section styles */
+.brand-identity {
+  padding: 100px 0; /* Add padding */
+  background-color: #f8f8f8; /* Set background color */
+  display: flex; /* Set to flex layout */
+  justify-content: space-between; /* Align items with space between them */
+  align-items: left; /* Center align items vertically */
+}
+
+/* Brand identity content styles */
+.brand-identity-content {
+  max-width: 60%; /* Set maximum width */
+  text-align: left; /* Align text to the left */
+  padding-left: 20px; /* Add left padding */
+  align-items: left;
+}
+.brand-identity-content h2 {
+  text-align: left;
+}
+
+
+/* Brand identity image styles */
+.brand-identity-image {
+  max-width: 50%; /* Set maximum width */
+  align-items:  right; /* Align image to the right */
+  margin-right: 4rem;
+  margin-top: 30px;
+}
+
+/* Style for the image */
+.brand-identity-image img {
+  border-radius: 10px; /* Adjust the border radius as needed */
+}
+
+/* Apply animations to brand identity section elements */
+.brand-identity-content h2,
+.brand-identity-content p {
+  opacity: 0; /* Initially hidden */
+}
+
+.brand-identity-content h2 {
+  animation: fadeInUp 1s ease forwards; /* Add fade-in animation */
+  animation-delay: 0.3s; /* Delay animation */
+}
+
+.brand-identity-content p {
+  animation: fadeInUp 1s ease forwards; /* Add fade-in animation */
+  animation-delay: 0.6s; /* Delay animation */
+}
+/* Define animation classes */
+/* Define animation classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateY(20px); /* Move element down by 20 pixels */
+  }
+  to {
+    opacity: 1; /* Set final opacity to 1 */
+    transform: translateY(0); /* Move element up to its original position */
+  }
+}
+
+/* Apply animations */
+.brand-identity-content {
+  opacity: 0; /* Initially hide the brand identity content */
+}
+
+.brand-identity-image {
+  opacity: 0; /* Initially hide the brand identity image */
+}
+
+.animate {
+  animation: fadeInUp 1s ease forwards; /* Apply fadeInUp animation with a duration of 1 second */
+}
+
+/* Define animation for identity content */
+#identity-content.animate {
+  opacity: 1; /* Make the identity content visible */
+  transform: translateY(0); /* Move identity content to its original position */
+}
+
+/* Define animation for identity image */
+#identity-image.animate {
+  opacity: 1; /* Make the identity image visible */
+  transform: translateX(0); /* Move identity image to its original position */
+}
+
+/* Hover animation for identity content */
+#identity-content:hover {
+  animation: slideInUp 0.9s ease forwards; /* Apply slideInUp animation on hover with a duration of 0.9 seconds */
+}
+
+/* Hover animation for identity image */
+#identity-image:hover {
+  animation: slideInRight 0.9s ease forwards; /* Apply slideInRight animation on hover with a duration of 0.9 seconds */
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideInUp {
+  from {
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateY(20px); /* Move element down by 20 pixels */
+  }
+  to {
+    opacity: 1; /* Set final opacity to 1 */
+    transform: translateY(0); /* Move element up to its original position */
+  }
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateX(20px); /* Move element right by 20 pixels */
+  }
+  to {
+    opacity: 1; /* Set final opacity to 1 */
+    transform: translateX(0); /* Move element to its original position */
+  }
+}
+
+
+/* Adjustments for the landing section content */
+#landing-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  padding: 20px; /* Add padding to center the content */
+}
+
+#landing-content {
+  max-width: 800px; /* Set a maximum width for the content */
+  text-align: center; /* Center align the content */
+}
+
+/* Animation for landing section content */
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Original code for identity section animation */
+#identity-content.animate, #identity-image.animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+#brand-identity {
+  position: relative;
+}
+
+.scroll-button {
+  position: absolute;
+  bottom: 40px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-button svg {
+  width: 24px;
+  height: 24px;
+  stroke: #000000; /* Adjust color as needed */
+  transition: transform 0.3s ease;
+}
+
+.scroll-button:hover {
+  opacity: 0.8;
+  background-color: #4e3232;
+}
+
+.scroll-button:hover svg {
+  transform: translateY(3px);
+}
+
+/* Style for Meet the CEO section */
+
+#CEO {
+  background-image:url(https://img.freepik.com/premium-photo/photo-flower-field-pink-flowers-summer-sunlight-evening-time-near-nature_961147-11482.jpg);
+  background-size: cover; /* Set background size to cover */
+  display: flex; /* Set to flex layout */
+}
+
+.ceo-container {
+  background-color: #000000; /* Set background color of the container to black */
+  color: #fff6f6; /* Set text color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Add box shadow for elevation effect */
+  padding: 50px; /* Add padding for content */
+  margin: 50px auto; /* Center the container horizontally */
+  max-width: 1000px; /* Set maximum width */
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-style: preserve-3d; /* Preserve 3D transformation */
+  transform: perspective(1000px) rotateX(-15deg); /* Apply perspective and rotate for 3D effect */
+  transition: transform 0.5s ease; /* Add transition for smooth animation */
+  text-align: center; /* Center align the content */
+}
+
+/* Apply animation on hover */
+.ceo-container:hover {
+  transform: perspective(1000px) rotateX(0); /* Rotate the container back to its original position on hover */
+}
+
+.ceo-profile {
+  display: flex;
+  align-items: center;
+}
+
+.ceo-profile img {
+  display: block; /* Ensure the image is a block element */
+  margin: 0 auto 30px; /* Center the image horizontally and add a 30px gap below it */
+  height: 200px;
+  width: 200px;
+  margin-top: 1.5rem;
+
+}
+.ceo-heading {
+  text-align: center; /* Center align the text */
+  margin-bottom: 1.5rem; /* Gap equivalent to the size of a finger space */
+  margin: 0 auto; /* Center the heading horizontally */
+  max-width: 800px; /* Set a maximum width for the heading */
+}
+
+
+/* Style for the CEO name */
+.ceo-info h3 {
+  margin-top: 0; /* Remove default margin */
+  margin-bottom: 10px; /* Add some space below the CEO name */
+  text-align: center; /* Align text to the center */
+}
+
+/* Style for the CEO description */
+.ceo-info p {
+  margin-bottom: 20px; /* Add some space below the CEO description */
+  text-align: center;
+}
+
+.socials-button {
+  background-color: #4e3232; /* Set button background color */
+  color: #fff; /* Set button text color */
+  padding: 10px 20px; /* Add padding to the button */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Add border radius */
+  font-size: 16px; /* Set button font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+.socials-button:hover {
+  background-color: #020202; /* Change button background color on hover */
+}
+
+.socials-button a {
+  text-decoration: none; /* Remove underline from the anchor text */
+  color: inherit; /* Inherit text color from parent */
+}
+

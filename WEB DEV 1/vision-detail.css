@@ -1,0 +1,111 @@
+/* Basic styles */
+
+.sedan-regular {
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sedan-regular-italic {
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+body {
+    font-family: 'Sedan', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #684b4b;
+    background-image: url(https://images.unsplash.com/photo-1522383225653-ed111181a951?ixlib=rb-4.0.3);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #000000;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0;
+    color: #fafafa;
+    font-size: 20px;
+    margin-left: 4rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px;
+    margin-right: 4rem;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fafafa;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #b16d6d;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+.vision-detail {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.vision-detail:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.vision-detail h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 28px;
+}
+
+.vision-detail p {
+    color: #666;
+    font-size: 16px;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
