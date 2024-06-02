@@ -374,23 +374,6 @@ button:hover {
     transform: translateX(0); /* Move element to its original position */
   }
 }
-
-.testimonial-carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  width: 100%;
-  background-color: #b16d6d;
-}
-
-/* Testimonial section styles */
-.testimonials {
-  text-align: center; /* Align text to center */
-}
-
-/* Testimonial heading styles */
-/* Basic styles */
 body {
   font-family: Sedan, sans-serif; /* Set the default font family */
   margin: 0; /* Remove default margin */
