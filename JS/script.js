@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // If the button exists, attach a click event listener to it
         scrollToProductsButton.addEventListener('click', function() {
             // Redirect to the "products.html" page when the button is clicked
-            window.location.href = 'products.html';
+            window.location.href = '../html/products.html';
         });
     }
 
