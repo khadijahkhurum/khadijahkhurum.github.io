@@ -30,11 +30,11 @@ if (scrollToProductCButton) {
 
 document.addEventListener('DOMContentLoaded', function () {
   const productsData = [
-    { id: 1, name: 'Lumière Dorée', price: 29.99, imageUrl: 'Images/Product 1.jpg', description: 'Immerse yourself in the radiant essence of sun-kissed citrus and golden peach. This luminous fragrance captures the warmth and vibrancy of a sunlit orchard. ', pageUrl: 'product1.html' },
-    { id: 2, name: 'Éclat de Lune', price: 33.99, imageUrl: 'Images/Product-2.jpg', description: 'Experience the enchanting allure of night-blooming jasmine and velvety plum. This captivating fragrance captures the shimmering essence of moonlight.', pageUrl: 'product2.html' },
-    { id: 3, name: 'Vérité Nocturne', price: 39.99, imageUrl: 'Images/Product 3.jpg' , description: 'Unveil the nocturnal truth with the exquisite scent of white orchid and soft sandalwood, captures the essence of midnight blooms, enveloping you in a serene and mysterious embrace.', pageUrl: 'product3.html' },
-    { id: 4, name: 'Étoile Filante', price: 49.99, imageUrl: 'Images/Product 4.jpg', description: 'Bask in the enchanting glow of sparkling bergamot and delicate lily of the valley, capturing the magic of a shooting star, enveloping you in a luminous and captivating embrace.', pageUrl: 'product4.html' },
-    { id: 5, name: 'Cœur de Rose', price: 59.99, imageUrl: 'Images/Product 7.jpg', description: 'Immerse yourself in the heart of elegance with the enchanting scent of pure jasmine and soft musk. This exquisite fragrance envelopes you in a delicate and romantic embrace.', pageUrl: 'product5.html' }
+    { id: 1, name: 'Lumière Dorée', price: 29.99, imageUrl: '../Images/Product 1.jpg', description: 'Immerse yourself in the radiant essence of sun-kissed citrus and golden peach. This luminous fragrance captures the warmth and vibrancy of a sunlit orchard.', pageUrl: 'product1.html' },
+    { id: 2, name: 'Éclat de Lune', price: 33.99, imageUrl: '../Images/Product-2.jpg', description: 'Experience the enchanting allure of night-blooming jasmine and velvety plum. This captivating fragrance captures the shimmering essence of moonlight.', pageUrl: 'product2.html' },
+    { id: 3, name: 'Vérité Nocturne', price: 39.99, imageUrl: '../Images/Product 3.jpg', description: 'Unveil the nocturnal truth with the exquisite scent of white orchid and soft sandalwood, captures the essence of midnight blooms, enveloping you in a serene and mysterious embrace.', pageUrl: 'product3.html' },
+    { id: 4, name: 'Étoile Filante', price: 49.99, imageUrl: '../Images/Product 4.jpg', description: 'Bask in the enchanting glow of sparkling bergamot and delicate lily of the valley, capturing the magic of a shooting star, enveloping you in a luminous and captivating embrace.', pageUrl: 'product4.html' },
+    { id: 5, name: 'Cœur de Rose', price: 59.99, imageUrl: '../Images/Product 7.jpg', description: 'Immerse yourself in the heart of elegance with the enchanting scent of pure jasmine and soft musk. This exquisite fragrance envelopes you in a delicate and romantic embrace.', pageUrl: 'product5.html' }
   ];
 
   const productsContainer = document.getElementById('products');
