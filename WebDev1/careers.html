@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="careers.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" style="text-decoration: none; color: #fff;">Maison de Juliette</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href= origins.html> Origins</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="career-intro">
+        <h2>Join Our Team</h2>
+        <p>At Maison de Juliette, we are always looking for talented individuals to join our growing team. Explore our current job openings below and become a part of our family.</p>
+    </section>
+
+    <section class="job-openings">
+        <h2>Current Job Openings</h2>
+        <div class="job-listing" onclick="openModal('marketing-specialist')">
+            <h3>Marketing Specialist</h3>
+            <p>Location: New York, NY</p>
+            <p>We are looking for a creative and driven marketing specialist to help us grow our brand.</p>
+            <button class="apply-button">Apply Now</button>
+        </div>
+        <div class="job-listing" onclick="openModal('product-designer')">
+            <h3>Product Designer</h3>
+            <p>Location: Los Angeles, CA</p>
+            <p>Join our design team to create beautiful and functional products that delight our customers.</p>
+            <button class="apply-button">Apply Now</button>
+        </div>
+        <div class="job-listing" onclick="openModal('sales-manager')">
+            <h3>Sales Manager</h3>
+            <p>Location: Chicago, IL</p>
+            <p>Lead our sales team and drive the growth of our business through strategic initiatives.</p>
+            <button class="apply-button">Apply Now</button>
+        </div>
+    </section>
+
+    <div id="jobModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-job-details"></div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; Maison de Juliette 2024
+    </footer>
+
+    <script src="careers.js"></script>
+</body>
+</html>
